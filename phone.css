@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.canvas {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #95D1CC;
+}
+
+.phone-case {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48vmin;
+    height: 90vmin;
+    background: linear-gradient(117deg, rgb(34, 87, 126) 0%, rgba(40,100,144,1) 38%, rgba(34,87,126,1) 68%, rgba(38,94,135,1) 95%);
+    border-radius: 7vmin;
+    border: 0.5vmin solid #0e3b5c;   
+}
+
+.camera-panel {
+    position: absolute;
+    top: 2vmin;
+    left: 2vmin;
+    width: 20vmin;
+    height: 20vmin;
+    border: 1vmin solid transparent;
+    border-radius: 7vmin;
+    background-image: linear-gradient(to right,
+        #0f446a, 
+        #205a84), 
+    linear-gradient(to right, 
+        #2175b3, 
+        #15527d, 
+        #19405c);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.sm-cam-1 {
+    position: absolute;
+    width: 7vmin;
+    height: 7vmin;
+    top: 1vmin;
+    left: 2vmin;
+    background: radial-gradient(circle, 
+        #1d1f9a 5%, 
+        #0a0b6a 16%, 
+        #1f1616 23%, 
+        #000000 25%, 
+        #000000 100%);
+    border-radius: 50%;
+    border: 1vmin solid #0a3c61;
+}
+
+.sm-cam-2 {
+    position: absolute;
+    width: 7vmin;
+    height: 7vmin;
+    top: 10vmin;
+    left: 2vmin;
+    background: radial-gradient(circle, 
+        rgba(29,31,154,1) 5%, 
+        rgba(10,11,106,1) 16%, 
+        rgba(31,22,22,1) 23%, 
+        rgba(0,0,0,1) 25%, 
+        rgba(0,0,0,1) 100%);
+    border-radius: 50%;
+    border: 1vmin solid #0a3c61;
+}
+
+.big-cam {
+    position: absolute;
+    width: 7.5vmin;
+    height: 7.5vmin;
+    top: 5vmin;
+    left: 9.5vmin;
+    background: radial-gradient(circle, 
+        rgba(29,31,154,1) 5%, 
+        rgba(10,11,106,1) 16%, 
+        rgba(31,22,22,1) 23%, 
+        rgba(0,0,0,1) 25%, 
+        rgba(0,0,0,1) 100%);
+    border-radius: 50%;
+    border: 1vmin solid #0a3c61;
+}
+
+.light {
+    position: absolute;
+    z-index: 50;
+    width: 2.5vmin;
+    height: 2.5vmin;
+    top: 1.5vmin;
+    left: 12vmin;
+    background: radial-gradient(circle, 
+        rgba(255,255,255,1) 25%, 
+        rgba(227,227,227,0.3) 100%);
+    border-radius: 50%;
+}
+
+.light.active {
+    overflow: hidden;   
+    animation: flash 0.25s normal forwards ease-in-out;
+}
+
+@keyframes flash {
+    0% {transform: scale(1)}
+    25% {transform: scale(100);}
+    50% {transform: scale(50);}
+    100% {transform: scale(1);}
+}
+
+.dark {
+    position: absolute;
+    width: 2.5vmin;
+    height: 2.5vmin;
+    top: 14vmin;
+    left: 12vmin;
+    background: #202020;
+    border-radius: 50%;
+    border: 0.25vmin solid #131313;
+}
+
+.dot {
+    position: absolute;
+    width: 0.5vmin;
+    height: 0.5vmin;
+    top: 13vmin;
+    left: 16vmin;
+    background: #242424;
+    border-radius: 50%;
+}
+
+.buttons-left {
+    position: absolute;
+    width: 1vmin;
+    height: 9vmin;
+    top: 22vmin;
+    left: -1vmin;
+    background: #0e3b5c;
+    border-radius: 0.5vmin 0 0 0.5vmin;
+}
+
+.buttons-right {
+    position: absolute;
+    width: 1vmin;
+    height: 8vmin;
+    top: 22vmin;
+    right: -1vmin;
+    background: #0e3b5c;
+    border-radius: 0 0.5vmin 0.5vmin 0;
+    box-shadow: 0 10vmin #0e3b5c;
+}
+
+.buttons-right::before {
+    content: "";
+    position: absolute;
+    width: 1vmin;
+    height: 5vmin;
+    top: -8vmin;
+    background: #0e3b5c;
+    border-radius: 0 0.5vmin 0.5vmin 0;
+}
+
+.logo {
+    position: absolute;
+    width: 15vmin;
+    height: 15vmin;
+    left: 17vmin;
+    bottom: 35vmin;
+    border-radius: 50%;
+    background:#1f5074;
+    color: #fff;
+    text-align: center;
+}
+
+.logo:hover {
+    background:#3174a0;
+}
+
+.logo i {
+    position: absolute;
+    left: 3.5vmin;
+    bottom: 4vmin;
+    font-size: 8vmin;
+    color: #27628d;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pure CSS: iPhone</title>
+    <link rel="stylesheet" href="phone.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="canvas">
+        <div class="phone-case">
+            <div class="phone">
+                <div class="camera-panel">
+                    <div class="sm-cam-1"></div>
+                    <div class="sm-cam-2"></div>
+                    <div id="light" class="light"></div>
+                    <div class="big-cam"></div>
+                    <div class="dark"></div>
+                    <div class="dot"></div>
+                </div>
+                <a class="logo" id="logo">
+                    <i class="fas fa-camera"></i>
+                </a>
+            </div>
+            <div class="buttons-left"></div>
+            <div class="buttons-right"></div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    $('.logo').click(function () { 
+        $('.light').addClass('active');
+            $('.light').one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(event) {
+                $('.light').removeClass('active')
+            });
+        }); 
+</script>
+</html>
